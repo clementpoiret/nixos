@@ -76,6 +76,11 @@
     LC_TIME = "fr_FR.UTF-8";
   };
 
+  # Fonts
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+  ];
+
   # X11
   services.xserver = {
     enable = true;
