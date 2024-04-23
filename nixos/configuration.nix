@@ -157,7 +157,6 @@
   # System packages
   environment.systemPackages = with pkgs; [
     curl
-    git
     hyprland-protocols
     pavucontrol
     polkit_gnome
