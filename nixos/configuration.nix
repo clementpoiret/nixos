@@ -135,6 +135,7 @@
   #services.xserver.libinput.enable = true;
 
   # Users
+  programs.zsh.enable = true;
   users.users.clementpoiret = {
     isNormalUser = true;
     description = "Clement POIRET";
@@ -142,6 +143,7 @@
     openssh.authorizedKeys.keys = [
       # TODO: add ssh public keys if needed
     ];
+    shell = pkgs.zsh;
   };
 
   # Hyprland
