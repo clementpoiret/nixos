@@ -7,6 +7,8 @@
     home-manager.url = "github:nix-community/home-manager/release-23.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    nix-colors.url = "github:misterio77/nix-colors";
+
     #hardware.url = "github:nixos/nixos-hardware";
   };
 
@@ -14,6 +16,7 @@
     self,
     nixpkgs,
     home-manager,
+    nix-colors,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -32,7 +35,7 @@
     homeConfigurations = {
       "clementpoiret@nixos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
-	extraSpecialArgs = {inherit inputs outputs;};
+	extraSpecialArgs = {inherit inputs outputs home-manager nix-colors;};
 	modules = [./home-manager/home.nix];
       };
     };
