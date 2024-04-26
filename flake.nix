@@ -16,7 +16,6 @@
     self,
     nixpkgs,
     home-manager,
-    nix-colors,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -35,7 +34,7 @@
     homeConfigurations = {
       "clementpoiret@nixos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
-	extraSpecialArgs = {inherit inputs outputs home-manager nix-colors;};
+	extraSpecialArgs = {inherit inputs outputs home-manager;};
 	modules = [./home-manager/home.nix];
       };
     };

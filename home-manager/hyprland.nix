@@ -11,7 +11,10 @@
       monitor = [
         ",preferred,0x0,0.8"
       ];
+
       "$mod" = "SUPER";
+      "exec-once" = "waybar";
+
       bind = [
         "$mod, RETURN, exec, xfce4-terminal"
 	"$mod, W, exec, firefox"
@@ -32,5 +35,9 @@
 	10)
       );
     };
+  };
+
+  programs.waybar = {
+    enable = true;
   };
 }

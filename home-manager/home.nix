@@ -3,7 +3,6 @@
   lib,
   config,
   pkgs,
-  nix-colors,
   ...
 }: {
   # Other home-manager modules
@@ -12,10 +11,10 @@
     ./yazi.nix
     ./zsh.nix
 
-    nix-colors.homeManagerModules.default
+    inputs.nix-colors.homeManagerModules.default
   ];
 
-  colorScheme = nix-colors.colorSchemes.catppuccin-mocha;
+  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 
   nixpkgs = {
     overlays = [];
