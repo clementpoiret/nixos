@@ -29,7 +29,7 @@
       ];
     };
     initExtra = ''
-      [[ ! -f ~/.dotfiles/home-manager/.p10k.zsh ]] || source ~/.dotfiles/home-manager/.p10k.zsh
+      [[ ! -f ~/.dotfiles/files/.p10k.zsh ]] || source ~/.dotfiles/files/.p10k.zsh
 
       # Colors
       if [ "$TERM" = "linux" ]; then
