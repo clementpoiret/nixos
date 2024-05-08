@@ -44,6 +44,7 @@
     hyprpicker
     kitty
     neovim
+    qutebrowser
     vlc
     swaylock
     wofi

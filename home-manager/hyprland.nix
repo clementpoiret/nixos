@@ -5,6 +5,11 @@
   pkgs,
   ...
 }: {
+  # Hyprland related packages
+  imports = [
+    ./waybar.nix
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
@@ -35,9 +40,5 @@
 	10)
       );
     };
-  };
-
-  programs.waybar = {
-    enable = true;
   };
 }

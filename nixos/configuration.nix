@@ -84,11 +84,11 @@
   # X11
   services.xserver = {
     enable = true;
+    autorun = false;
     layout = "us";
     xkbVariant = "";
+    displayManager.startx.enable = true;
   };
-  # TODO: REMOVE ONCE HYPRLAND IS FULLY FUNCTIONAL
-  services.xserver.desktopManager.xfce.enable = true;
 
   # XDG Portals and screensharing in wayland
   services.dbus.enable = true;
@@ -105,16 +105,16 @@
   };
 
   # Setting up greetd
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        # WARNING: Next ver. of Tuigreet will separate --sessions and --xsessions, and add --xsession-wrapper
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --asterisks --remember --remember-user-session --time --sessions ${config.services.xserver.displayManager.sessionData.desktops}/share/xsessions:${config.services.xserver.displayManager.sessionData.desktops}/share/wayland-sessions";
-	user = "greeter";
-      };
-    };
-  };
+  #services.greetd = {
+  #  enable = true;
+  #  settings = {
+  #    default_session = {
+  #     # WARNING: Next ver. of Tuigreet will separate --sessions and --xsessions, and add --xsession-wrapper
+  #      command = "${pkgs.greetd.tuigreet}/bin/tuigreet --asterisks --remember --remember-user-session --time --sessions ${config.services.xserver.displayManager.sessionData.desktops}/share/xsessions:${config.services.xserver.displayManager.sessionData.desktops}/share/wayland-sessions";
+  #      user = "greeter";
+  #    };
+  #  };
+  #};
 
   # Enable CUPS to print documents
   services.printing.enable = true;
@@ -176,6 +176,7 @@
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
+    xterm
     zellij
   ];
 
