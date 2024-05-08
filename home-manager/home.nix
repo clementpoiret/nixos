@@ -38,7 +38,12 @@
     userEmail = "poiret.clement@outlook.fr";
   };
 
+  fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
+    # Fonts
+    (nerdfonts.override { fonts = [ "FiraCode" "FiraMono" ]; })
+
+    # Packages
     floorp
     hyprpaper
     hyprpicker
