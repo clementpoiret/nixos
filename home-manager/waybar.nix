@@ -103,7 +103,7 @@
         "critical-threshold" = 40;
         "format-critical" = "{temperatureC}°C {icon}";
         "format" = "{temperatureC}°C {icon}";
-        "format-icons" = ["" , "", ""];
+        "format-icons" = ["" "" ""];
         "tooltip" = true;
         "on-click" = "gnome-system-monitor";
         "interval" = 1;
@@ -111,7 +111,7 @@
       "backlight" = {
         # "device" = "acpi_video1";
         "format" = "{percent}% {icon}";
-        "format-icons" = ["", ""];
+        "format-icons" = ["" ""];
         "on-scroll-up" = "/home/cp264607/.config/hypr/scripts/tools/brightness_ctl.sh up";
         "on-scroll-down" = "/home/cp264607/.config/hypr/scripts/tools/brightness_ctl.sh down";
         "interval" = 1;
@@ -128,13 +128,13 @@
         "format-alt" = "{time} {icon}";
         # "format-good" = ""; # An empty format will hide the module
         # "format-full" = "";
-        "format-icons" = [" ", " ", " ", " ", " "];
+        "format-icons" = [" " " " " " " " " "];
         "interval" = 1;
       };
       "network" = {
         # "interface" = "wlp2*"; # (Optional) To force the use of this interface
         "format-wifi" = "{essid} ({signalStrength}%) ";
-        "format-ethernet" = "{ipaddr}/{cidr} 󰈀", 
+        "format-ethernet" = "{ipaddr}/{cidr} 󰈀";
         "tooltip-format" = "{ifname} via {gwaddr} 󰖟";
         "format-linked" = "{ifname} (No IP) 󰌷";
         "format-disconnected" = "Disconnected ⚠";
@@ -157,7 +157,7 @@
             "phone" = " ";
             "portable" = " ";
             "car" = " ";
-            "default" = ["", "", " "];
+            "default" = ["" "" " "];
         };
         "on-click" = "pavucontrol";
       };
